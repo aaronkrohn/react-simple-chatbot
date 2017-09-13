@@ -7,12 +7,13 @@ const SubmitButton = styled.button`
   box-shadow: none;
   cursor: ${props => props.disabled ? 'default' : 'pointer'};
   fill: ${props => props.invalid ? '#E53935' : '#4a4a4a'};
-  opacity: ${props => props.disabled && !props.invalid ? '.5' : '1'};
+  opacity: ${props => props.disabled && !props.invalid ? '0' : '1'};
   outline: none;
   padding: 14px 16px 12px 16px;
   position: absolute;
   right: 0;
   top: 0;
+  transition: opacity 0.2s ease-in-out;
 
   &:not(:disabled):hover {
     opacity: .7;
