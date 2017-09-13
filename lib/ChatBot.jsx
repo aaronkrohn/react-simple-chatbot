@@ -419,6 +419,7 @@ class ChatBot extends Component {
     const {
       avatarStyle,
       bubbleStyle,
+      bubbleOptionStyle,
       customStyle,
       hideBotAvatar,
       hideUserAvatar,
@@ -446,7 +447,7 @@ class ChatBot extends Component {
           key={index}
           step={step}
           triggerNextStep={this.triggerNextStep}
-          bubbleStyle={bubbleStyle}
+          bubbleOptionStyle={bubbleOptionStyle}
         />
       );
     }
@@ -579,6 +580,7 @@ ChatBot.propTypes = {
   botAvatar: PropTypes.string,
   botDelay: PropTypes.number,
   bubbleStyle: PropTypes.object,
+  bubbleOptionStyle: PropTypes.object,
   cache: PropTypes.bool,
   cacheName: PropTypes.string,
   className: PropTypes.string,
@@ -609,6 +611,7 @@ ChatBot.defaultProps = {
   avatarStyle: {},
   botDelay: 1000,
   bubbleStyle: {},
+  bubbleOptionStyle: {},
   cache: false,
   cacheName: 'rsc_cache',
   className: '',
