@@ -374,6 +374,8 @@ class ChatBot extends Component {
         previousSteps,
         disabled: true,
         inputValue: '',
+      }, () => {
+        this.input.blur();
       });
     }
   }
